@@ -6,32 +6,9 @@ import org.junit.runners.Parameterized;
 
 import java.util.List;
 
-@RunWith(Parameterized.class)
 public class LionTest {
 
     private String defaultSex = "Самец";
-    private final String sex;
-    private final boolean status;
-
-    public LionTest(String sex, boolean status) {
-        this.sex = sex;
-        this.status = status;
-    }
-
-
-    @Parameterized.Parameters // добавили аннотацию
-    public static Object[][] getHaveMane() {
-        return new Object[][]{
-                {"Самец", true},
-                {"Самка", false},
-        };
-    }
-
-    @Test
-    public void doesHaveManeLionTestParametrized() throws Exception {
-        Lion lion = new Lion(sex);
-        Assert.assertEquals(status,lion.doesHaveMane());
-    }
 
     @Test
     public void felineGetKittensDefaultNumberTest() throws Exception {
