@@ -16,17 +16,25 @@ public class Lion {
         }
     }
 
-    Feline feline = new Feline();
+    private IFeline ifeline;
+    public Lion (IFeline ifeline){
+        this.ifeline = ifeline;
+    }
 
     public int getKittens() {
-        return feline.getKittens();
+        return ifeline.getKittens();
     }
 
     public boolean doesHaveMane() {
         return hasMane;
     }
 
+    private Animal animal;
+    public Lion (Animal animal){
+        this.animal = animal;
+    }
+
     public List<String> getFood() throws Exception {
-        return feline.getFood("Хищник");
+        return animal.getFood("Хищник");
     }
 }
