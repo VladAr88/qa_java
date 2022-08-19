@@ -1,3 +1,5 @@
+import com.example.Feline;
+import com.example.IFeline;
 import com.example.Lion;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,6 +14,7 @@ public class LionParametrizedTest {
     private String defaultSex = "Самец";
     private final String sex;
     private final boolean status;
+    IFeline ifeline = new Feline();
 
     public LionParametrizedTest(String sex, boolean status) {
         this.sex = sex;
